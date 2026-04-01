@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Personal Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/d80b8ede0c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+ 
+<div id="header">
+    <div class="container">
+        <nav>
+            <ul id="sidemenu">
+                <li><a href="index.html" class="active-nav">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+ 
+        <div class="header-row">
+            <div class="header-text">
+                <h1><span>void message(){</span><br> I'm Sofia Hernandez,</h1>
+                <p class="header-desc">a second year CS student at Michigan State University. </p>
+                <br>
+                <p class="header-desc"> While I am still figuring out my interests, </p>
+                <p class="header-desc">I am passionate about learning and growing everyday, utilizing new technologies and working with peers! </p>
+                <br>
+                <p class="header-desc"> }</p>
+            </div>
+        </div>
+    </div>
+</div>
+ 
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+ 
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+ 
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+ 
+</body>
+</html>

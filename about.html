@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Personal Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/d80b8ede0c.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    
+<div class="container">
+    <nav>
+        <ul id="sidemenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="active-nav">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+        </ul>
+        <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+    </nav>
+</div>
+ 
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                 <img src="images/Spartan-Helmet_Green-RGB.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Highly motivated student seeking to gain hands-on experience, apply skills, and collaborate in a team setting.</p>
+ 
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+ 
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li>
+                            <span>Technical Skills</span>
+                            <ul class="sub-bullets">
+                                <li>- Languages: Python, C++, C#, JavaScript</li>
+                                <li>- Frameworks: PySide6 (Qt), React.js</li>
+                                <li>- Databases: SQL (Coursework)</li>
+                                <li>- Other: Git, HTML/CSS</li>
+                                <li>- Knowledgeable in Excel, PowerPoint, Word</li>
+                                <li>- Proficient in Spanish</li>
+                            </ul>
+
+                        </li>  
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li>
+                            <span>Professorial Assistantship</span>
+                            <ul class="sub-bullets">
+                                <li>- Created a Python program to web scrape information from Google Scholar, such as the name and
+                                interests of MSU CSE research professors. Generated a PowerPoint presentation and an Excel file with
+                                graphical representation of the data, ensuring the information is always up to date whenever the program
+                                is run.</li>
+                                <li>- Currently working on integrating a backend graph file with a custom program in Python that will create
+                                and manipulate graphs used in graph theory. Using PySide6 as the Python framework for building the
+                                graphical user interface. Goal is to create a multi-platform graph manipulation tool for professors and
+                                graduate students to use.</li>
+                                <li>- Overseen by Dr. Esfahanian, Chairperson of the CSE Department</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li>
+                            <span>Michigan State University</span>
+                            <ul class="sub-bullets">
+                                <li>Member of the Honors College</li>
+                            </ul>
+                            <span>Computer Science, B.S.</span>
+                            <ul class="sub-bullets">
+                                <li>Exp. 2028</li>
+                            </ul>
+                            <span>Minor in Mathematics</span>
+                            <!-- <ul class="sub-bullets">
+                                <li>Honors coursework</li>
+                            </ul> -->
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ 
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+ 
+    function opentab(tabname){
+        for (tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+ 
+    var sidemenu = document.getElementById("sidemenu");
+ 
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+ 
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+ 
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/d80b8ede0c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+<div class="container">
+    <nav>
+        <ul id="sidemenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html" class="active-nav">Portfolio</a></li>
+            <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+        </ul>
+        <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+    </nav>
+</div>
+ 
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/2dShooterIcon.png" alt="2D Shooter">
+                <div class="layer">
+                    <h3>2D Shooter</h3>
+                    <a href="https://sofiexs.itch.io/2d-shooter-modifications" target="_blank"></a>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/2dPlatformIcon.png" alt="2D Platformer">
+                <div class="layer">
+                    <h3>2D Platformer</h3>
+                    <a href="https://sofiexs.itch.io/2d-platformer-modifications" target="_blank"></a>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/3dFPSIcon.png" alt="3D FPS">
+                <div class="layer">
+                    <h3>3D FPS</h3>
+                    <a href="https://sofiexs.itch.io/3dfps-modifications" target="_blank"></a>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </div>
+            </div>
+        </div>
+        <a href="https://sofiexs.itch.io" target="_blank" class="btn">See more on itch.io</a>
+    </div>
+</div>
+ 
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+ 
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+ 
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+ 
+</body>
+</html>
